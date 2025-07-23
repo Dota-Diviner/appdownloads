@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" href="https://appdownloads.dotadiviner.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Dota Diviner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+            color: #1a1a1a;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: #f2e36e;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #f2e36e;
+            border-radius: 2px;
+        }
+
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .platform-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .platform-icon {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(242, 227, 110, 0.15);
+            transition: all 0.3s;
+        }
+
+        .platform-card:hover .platform-icon {
+            background: #f2e36e;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            margin: 8px;
+            transition: all 0.3s;
+            font-weight: 500;
+            gap: 10px;
+            border: 2px solid transparent;
+        }
+
+        .download-btn i {
+            font-size: 1.2em;
+        }
+
+        .download-btn:hover {
+            background: #f2e36e;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+            border-color: #1a1a1a;
+        }
+
+        @media (max-width: 600px) {
+            .platforms {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .platform-card {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .platform-card:nth-child(1) { animation-delay: 0.1s; }
+        .platform-card:nth-child(2) { animation-delay: 0.2s; }
+        .platform-card:nth-child(3) { animation-delay: 0.3s; }
+        .platform-card:nth-child(4) { animation-delay: 0.4s; }
+        .platform-card:nth-child(5) { animation-delay: 0.5s; }
+        .platform-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-download"></i> Download Dota Diviner</h1>
+        
+        <div class="platforms">
+            <!-- Android Card -->
+            <div class="platform-card">
+                <i class="fab fa-android platform-icon"></i>
+                <h2>Android</h2>
+                <a href="https://play.google.com/store/apps/details?id=ru.vasmarfas.dotadivinerapp" class="download-btn" target="_blank">
+                    <i class="fab fa-google-play"></i> Google Play
+                </a>
+                <a href="https://apps.rustore.ru/app/ru.vasmarfas.dotadivinerapp" class="download-btn" target="_blank">
+                    <i class="fas fa-store"></i> RuStore
+                </a>
+            </div>
+
+            <!-- iOS Card -->
+            <div class="platform-card">
+                <i class="fab fa-app-store-ios platform-icon"></i>
+                <h2>iOS</h2>
+                <a href="https://apps.apple.com/app/d-diviner/id6741724843" class="download-btn" target="_blank">
+                    <i class="fab fa-apple"></i> App Store
+                </a>
+            </div>
+
+            <!-- Web Version Card -->
+            <div class="platform-card">
+                <i class="fas fa-globe platform-icon"></i>
+                <h2>Web Version</h2>
+                <a href="https://t.me/DotaDivinerBot" class="download-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram Bot
+                </a>
+            </div>
+
+            <!-- Windows Card -->
+            <div class="platform-card">
+                <i class="fab fa-windows platform-icon"></i>
+                <h2>Windows</h2>
+                <a href="https://apps.microsoft.com/detail/9N06XZ0QV6MT" class="download-btn" target="_blank">
+                    <i class="fab fa-microsoft"></i> Microsoft Store
+                </a>
+                <a href="https://vault.dotadiviner.com/DotaDiviner.msi" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> .msi Installer
+                </a>
+            </div>
+
+            <!-- macOS Card -->
+            <div class="platform-card">
+                <i class="fab fa-apple platform-icon"></i>
+                <h2>macOS</h2>
+                <a href="https://apps.apple.com/app/d-diviner/id6741724843" class="download-btn" target="_blank">
+                    <i class="fab fa-apple"></i> App Store
+                </a>
+            </div>
+
+            <!-- Linux Card -->
+            <div class="platform-card">
+                <i class="fab fa-linux platform-icon"></i>
+                <h2>Linux</h2>
+                <a href="https://vault.dotadiviner.com/DotaDiviner.deb" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> .deb Package
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
